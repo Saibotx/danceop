@@ -12,7 +12,10 @@ fs = require('fs');
 
 
 
+//default mongoURL for localhost
 var mongoUri = 'mongodb://localhost/noderest';
+//new URI for Heroku
+mongoUri = 'mongodb://heroku_2vdkgl7c:dfuhmjuj7mjngkhf3ueuuc9h2p@ds155934.mlab.com:55934/heroku_2vdkgl7c';
 mongoose.connect(mongoUri);
 var db = mongoose.connection;
 db.on('error', function () {
