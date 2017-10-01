@@ -29,7 +29,7 @@ var app = express();
 require('./models/musician.js');
 require('./routes')(app);
 
-app.listen(8899);
+app.listen(process.env.PORT || 8080);
 console.log('Listening on port 3001...');
 
 // // var app = express();
