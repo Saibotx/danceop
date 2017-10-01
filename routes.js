@@ -1,14 +1,22 @@
-var musicians = require('./controllers/musicians.js');
+// var auditions = require('./controllers/auditions.js');
+var auditions = require('./controllers/auditions.js');
 
 
 
 module.exports = function(app){
-		console.log('musicians is ', musicians);
-    app.get('/musicians', musicians.findAll);
-    app.get('/musicians/:id', musicians.findById);
-    app.post('/musicians', musicians.add);
-    app.put('/musicians/:id', musicians.update);
-    app.del('/musicians/:id', musicians.del);
-    app.get('/import', musicians.imp);
-    app.get('/deleteAll', musicians.deleteAll);
+    // app.get('/auditions', auditions.findAll);
+    // app.get('/auditions/:id', auditions.findById);
+    // app.post('/auditions', auditions.add);
+    // app.put('/auditions/:id', auditions.update);
+    // app.del('/auditions/:id', auditions.del);
+    // app.get('/import', auditions.imp);
+    // app.get('/deleteAll', auditions.deleteAll);
+
+    app.get('/auditions', auditions.findAll);
+    app.get('/auditions/:id', auditions.findById);
+    app.post('/audition/add', auditions.add);
+    app.put('/auditions/:id', auditions.update);
+    app.del('/auditions/:id', auditions.del);
+    app.get('/import', auditions.imp);
+    app.get('/deleteAll', auditions.deleteAll);
 }

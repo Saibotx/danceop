@@ -27,6 +27,7 @@ var app = express();
 // app.use(bodyParser());
 
 require('./models/musician.js');
+require('./models/audition.js');
 require('./routes')(app);
 
 app.listen(process.env.PORT || 8080);
